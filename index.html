@@ -9,93 +9,72 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             background-color: #f7f8fa;
-        }
-        .sidebar {
-            background-color: #fff;
-            border-right: 1px solid rgba(0, 0, 0, 0.1);
-            height: 100vh;
-            width: 240px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            overflow-y: auto;
-            padding-top: 20px;
-        }
-        .content {
-            margin-left: 240px;
             padding: 20px;
+            font-size: 18px;
         }
-        .category {
-            padding: 10px 20px;
-            cursor: pointer;
-            border-left: 3px solid transparent;
+        .category-list {
+            list-style-type: none;
+            padding: 0;
         }
-        .category:hover,
-        .category.active {
-            background-color: #f0f2f5;
-            border-left: 3px solid #276ef1;
-            color: #276ef1;
+        .category-item {
+            display: inline;
+            margin-right: 10px;
+            position: relative;
         }
-        .file-title {
+        .category-item:not(:last-child)::after {
+            content: '-';
+            color: #ff6b00;
+            margin-left: 10px;
+        }
+        .category-item:hover .file-list {
+            display: block;
+        }
+        .file-list {
+            display: none;
+            position: absolute;
             background-color: #fff;
-            padding: 15px;
-            margin-bottom: 10px;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.2s ease-in-out;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            z-index: 100;
+            left: 0;
+            white-space: nowrap;
         }
-        .file-title:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #276ef1;
-            font-weight: normal;
+        .file-item {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
 
-    <div class="sidebar">
-        <div class="category" onclick="showFiles('category1')">类别1</div>
-        <div class="category" onclick="showFiles('category2')">类别2</div>
-        <!-- 更多类别... -->
-    </div>
-
-    <div class="content">
-        <h1>文件标题</h1>
-        <div id="files">
-            <!-- 文件标题将在这里显示 -->
+<ul class="category-list">
+    <li class="category-item">
+        生活
+        <div class="file-list">
+            <div class="file-item">超市 - 购物</div>
+            <div class="file-item">清洁 - 整理</div>
+            <!-- 其他生活相关文件 -->
         </div>
-    </div>
+    </li>
+    <li class="category-item">
+        娱乐
+        <div class="file-list">
+            <div class="file-item">电影观看 - 电影</div>
+<div class="file-item">游戏时间 - Switch</div>
+<!-- 其他娱乐相关文件 -->
+</div>
+</li>
+<li class="category-item">
+工作
+<div class="file-list">
+<div class="file-item">项目报告 - 会议</div>
+<div class="file-item">市场分析 - 研究</div>
+<!-- 其他工作相关文件 -->
+</div>
+</li>
+<!-- 更多类别... -->
 
-    <script>
-        // 模拟数据，实际应用中应该从服务器获取
-        var files = {
-            'category1': ['文献1', '文献2'],
-            'category2': ['文献3', '文献4']
-            // 更多类别和文件...
-        };
-
-        // 显示选中类别中的文件
-        function showFiles(category) {
-            // 清除之前的active类别
-            document.querySelectorAll('.category').forEach(function (elem) {
-                elem.classList.remove('active');
-            });
-            
-            // 设置当前类别为active
-            event.target.classList.add('active');
-            
-            var filesContainer = document.getElementById('files');
-            filesContainer.innerHTML = ''; // 清空现有内容
-            var titles = files[category];
-            titles.forEach(function(title) {
-                var div = document.createElement('div');
-                div.className = 'file-title';
-                div.textContent = title;
-                filesContainer.appendChild(div);
-            });
-        }
-    </script>
-
+</ul>
 </body>
 </html>
