@@ -1,46 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>文献库</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f7f8fa;
         }
-        #library {
-            display: flex;
+        .sidebar {
+            background-color: #fff;
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            width: 240px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            padding-top: 20px;
         }
-        #categories {
-            flex: 1;
-            padding: 10px;
-            background: #f0f0f0;
-        }
-        #files {
-            flex: 3;
-            padding: 10px;
+        .content {
+            margin-left: 240px;
+            padding: 20px;
         }
         .category {
+            padding: 10px 20px;
             cursor: pointer;
-            padding: 5px;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
+            border-left: 3px solid transparent;
         }
-        .category:hover {
-            background: #e0e0e0;
+        .category:hover,
+        .category.active {
+            background-color: #f0f2f5;
+            border-left: 3px solid #276ef1;
+            color: #276ef1;
         }
         .file-title {
-            padding: 5px;
-            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        .file-title:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #276ef1;
+            font-weight: normal;
         }
     </style>
 </head>
 <body>
-    <div id="library">
-        <div id="categories">
-            <!-- 类别列表 -->
-            <div class="category" onclick="showFiles('category1')">类别1</div>
-            <div class="category" onclick="showFiles('category2')">类别2</div>
-            <!-- 更多类别... -->
-        </div>
+
+    <div class="sidebar">
+        <div class="category" onclick="showFiles('category1')">类别1</div>
+        <div class="category" onclick="showFiles('category2')">类别2</div>
+        <!-- 更多类别... -->
+    </div>
+
+    <div class="content">
+        <h1>文件标题</h1>
         <div id="files">
             <!-- 文件标题将在这里显示 -->
         </div>
@@ -56,6 +77,14 @@
 
         // 显示选中类别中的文件
         function showFiles(category) {
+            // 清除之前的active类别
+            document.querySelectorAll('.category').forEach(function (elem) {
+                elem.classList.remove('active');
+            });
+            
+            // 设置当前类别为active
+            event.target.classList.add('active');
+            
             var filesContainer = document.getElementById('files');
             filesContainer.innerHTML = ''; // 清空现有内容
             var titles = files[category];
@@ -67,5 +96,6 @@
             });
         }
     </script>
+
 </body>
 </html>
