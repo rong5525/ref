@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文献库</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #library {
+            display: flex;
+        }
+        #categories {
+            flex: 1;
+            padding: 10px;
+            background: #f0f0f0;
+        }
+        #files {
+            flex: 3;
+            padding: 10px;
+        }
+        .category {
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        .category:hover {
+            background: #e0e0e0;
+        }
+        .file-title {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="library">
+        <div id="categories">
+            <!-- 类别列表 -->
+            <div class="category" onclick="showFiles('category1')">类别1</div>
+            <div class="category" onclick="showFiles('category2')">类别2</div>
+            <!-- 更多类别... -->
+        </div>
+        <div id="files">
+            <!-- 文件标题将在这里显示 -->
+        </div>
+    </div>
+
+    <script>
+        // 模拟数据，实际应用中应该从服务器获取
+        var files = {
+            'category1': ['文献1', '文献2'],
+            'category2': ['文献3', '文献4']
+            // 更多类别和文件...
+        };
+
+        // 显示选中类别中的文件
+        function showFiles(category) {
+            var filesContainer = document.getElementById('files');
+            filesContainer.innerHTML = ''; // 清空现有内容
+            var titles = files[category];
+            titles.forEach(function(title) {
+                var div = document.createElement('div');
+                div.className = 'file-title';
+                div.textContent = title;
+                filesContainer.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>

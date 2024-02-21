@@ -1,0 +1,6 @@
+@echo off
+echo Running Git commands...
+git pull
+echo Git commands executed successfully.
+echo Waiting for 5 seconds before exiting...
+timeout /t 5 /nobreak >nul
