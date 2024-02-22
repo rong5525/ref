@@ -5,30 +5,40 @@
     <title>Degradation</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px; /* Uniform font size */
-            background-color: #f7f8fa;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 16px;
             color: #333;
+            background-color: #fff;
+            margin: 0;
             padding: 20px;
         }
-        ul {
-            padding-left: 40px; /* Adjust padding for bullet points */
+        ul.pdf-list {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+        }
+        ul.pdf-list li {
+            margin: 5px 0;
         }
         a {
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
         }
-        a.return {
-            font-weight: bold;
-            text-decoration: none; /* Remove underline from 'Ref' link */
+        a:hover {
+            text-decoration: underline;
+        }
+        .return-link {
+            display: block;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <a href="..\../index.html" class="return">Ref</a> - <span>Degradation</span>
-    <ul style="list-style-type: disc; padding-left: 40px;">
-<li><a href="2013_Durst_Applied Catalysis B Environmental.pdf" style="text-decoration: none; color: #333;">2013_Durst_Applied Catalysis B Environmental</a></li>
-<li><a href="2023_Verma_Fluid Mechanics and Fluid Power (Vol. 3).pdf" style="text-decoration: none; color: #333;">2023_Verma_Fluid Mechanics and Fluid Power (Vol. 3)</a></li>
+    <a href="..\../index.html" class="return-link">← Back to Ref</a>
+    <h1>Degradation</h1>
+    <ul class="pdf-list">
+  <li><a href="2013_Durst_Applied Catalysis B Environmental.pdf">2013_Durst_Applied Catalysis B Environmental</a></li>
+  <li><a href="2023_Verma_Fluid Mechanics and Fluid Power (Vol. 3).pdf">2023_Verma_Fluid Mechanics and Fluid Power (Vol. 3)</a></li>
 </ul>
 
 </body>

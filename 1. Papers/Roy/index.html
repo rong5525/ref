@@ -5,33 +5,43 @@
     <title>Roy</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px; /* Uniform font size */
-            background-color: #f7f8fa;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 16px;
             color: #333;
+            background-color: #fff;
+            margin: 0;
             padding: 20px;
         }
-        ul {
-            padding-left: 40px; /* Adjust padding for bullet points */
+        ul.pdf-list {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+        }
+        ul.pdf-list li {
+            margin: 5px 0;
         }
         a {
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
         }
-        a.return {
-            font-weight: bold;
-            text-decoration: none; /* Remove underline from 'Ref' link */
+        a:hover {
+            text-decoration: underline;
+        }
+        .return-link {
+            display: block;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <a href="..\../index.html" class="return">Ref</a> - <span>Roy</span>
-    <ul style="list-style-type: disc; padding-left: 40px;">
-<li><a href="2019_Li_AIP Advances.pdf" style="text-decoration: none; color: #333;">2019_Li_AIP Advances</a></li>
-<li><a href="2022_Li_Applied Optics.pdf" style="text-decoration: none; color: #333;">2022_Li_Applied Optics</a></li>
-<li><a href="2023_Li_Applied Optics.pdf" style="text-decoration: none; color: #333;">2023_Li_Applied Optics</a></li>
-<li><a href="2023_Li_Energies.pdf" style="text-decoration: none; color: #333;">2023_Li_Energies</a></li>
-<li><a href="2023_Li_Journal of Nanoparticle Research.pdf" style="text-decoration: none; color: #333;">2023_Li_Journal of Nanoparticle Research</a></li>
+    <a href="..\../index.html" class="return-link">← Back to Ref</a>
+    <h1>Roy</h1>
+    <ul class="pdf-list">
+  <li><a href="2019_Li_AIP Advances.pdf">2019_Li_AIP Advances</a></li>
+  <li><a href="2022_Li_Applied Optics.pdf">2022_Li_Applied Optics</a></li>
+  <li><a href="2023_Li_Applied Optics.pdf">2023_Li_Applied Optics</a></li>
+  <li><a href="2023_Li_Energies.pdf">2023_Li_Energies</a></li>
+  <li><a href="2023_Li_Journal of Nanoparticle Research.pdf">2023_Li_Journal of Nanoparticle Research</a></li>
 </ul>
 
 </body>

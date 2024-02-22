@@ -2,39 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ref</title>
+    <title>Ref Directory</title>
     <style>
         body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px;
-            background-color: #f7f8fa;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 20px; /* Updated font size */
             color: #333;
+            background-color: #fff;
+            margin: 0;
             padding: 20px;
-            margin-left: 50px;
         }}
         .folder-row {{
             margin-bottom: 15px;
         }}
         .folder-name {{
             font-weight: bold;
+            font-size: 22px; /* Slightly larger for hierarchy */
         }}
-        .subfolder-link {{
-            text-decoration: none;
+        a {{
             color: #333;
+            text-decoration: none;
         }}
-        .subfolder-link:not(:last-child)::after {{
-            content: " - ";
-            white-space: nowrap; /* Prevent wrapping */
+        a:hover {{
+            text-decoration: underline;
         }}
     </style>
 </head>
 <body>
-    <h1>Ref</h1>
-  <div class="folder-row"><span class="folder-name">1. Papers</span>
-<a href="1. Papers\Ben\index.html" class="subfolder-link">Ben</a> <a href="1. Papers\Roy\index.html" class="subfolder-link">Roy</a></div>
-  <div class="folder-row"><span class="folder-name">2. Mie</span>
-<a href="2. Mie\Transverse Scattering\index.html" class="subfolder-link">Transverse Scattering</a></div>
-  <div class="folder-row"><span class="folder-name">3. Fuel Cell</span>
-<a href="3. Fuel Cell\Degradation\index.html" class="subfolder-link">Degradation</a> <a href="3. Fuel Cell\System Modeling\index.html" class="subfolder-link">System Modeling</a></div>
+    <h1>Ref Directory</h1>
+<div class="folder-row"><span class="folder-name">1. Papers: </span><a href="1. Papers\Ben\index.html">Ben</a> - <a href="1. Papers\Roy\index.html">Roy</a></div>
+<div class="folder-row"><span class="folder-name">2. Mie: </span><a href="2. Mie\Transverse Scattering\index.html">Transverse Scattering</a></div>
+<div class="folder-row"><span class="folder-name">3. Fuel Cell: </span><a href="3. Fuel Cell\Degradation\index.html">Degradation</a> - <a href="3. Fuel Cell\System Modeling\index.html">System Modeling</a></div>
 </body>
 </html>

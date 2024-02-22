@@ -5,33 +5,43 @@
     <title>Ben</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 22px; /* Uniform font size */
-            background-color: #f7f8fa;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            font-size: 16px;
             color: #333;
+            background-color: #fff;
+            margin: 0;
             padding: 20px;
         }
-        ul {
-            padding-left: 40px; /* Adjust padding for bullet points */
+        ul.pdf-list {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+        }
+        ul.pdf-list li {
+            margin: 5px 0;
         }
         a {
-            text-decoration: none;
             color: #333;
+            text-decoration: none;
         }
-        a.return {
-            font-weight: bold;
-            text-decoration: none; /* Remove underline from 'Ref' link */
+        a:hover {
+            text-decoration: underline;
+        }
+        .return-link {
+            display: block;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <a href="..\../index.html" class="return">Ref</a> - <span>Ben</span>
-    <ul style="list-style-type: disc; padding-left: 40px;">
-<li><a href="2008_Liu_IEEE Transactions on NanoBioscience.pdf" style="text-decoration: none; color: #333;">2008_Liu_IEEE Transactions on NanoBioscience</a></li>
-<li><a href="2011_Liu_IEEE Transactions on Nanotechnology.pdf" style="text-decoration: none; color: #333;">2011_Liu_IEEE Transactions on Nanotechnology</a></li>
-<li><a href="2011_Liu_The Journal of Physical Chemistry C.pdf" style="text-decoration: none; color: #333;">2011_Liu_The Journal of Physical Chemistry C</a></li>
-<li><a href="2012_Li_Journal of Nanoparticle Research.pdf" style="text-decoration: none; color: #333;">2012_Li_Journal of Nanoparticle Research</a></li>
-<li><a href="2013_Liu_Journal of Nano Research.pdf" style="text-decoration: none; color: #333;">2013_Liu_Journal of Nano Research</a></li>
+    <a href="..\../index.html" class="return-link">← Back to Ref</a>
+    <h1>Ben</h1>
+    <ul class="pdf-list">
+  <li><a href="2008_Liu_IEEE Transactions on NanoBioscience.pdf">2008_Liu_IEEE Transactions on NanoBioscience</a></li>
+  <li><a href="2011_Liu_IEEE Transactions on Nanotechnology.pdf">2011_Liu_IEEE Transactions on Nanotechnology</a></li>
+  <li><a href="2011_Liu_The Journal of Physical Chemistry C.pdf">2011_Liu_The Journal of Physical Chemistry C</a></li>
+  <li><a href="2012_Li_Journal of Nanoparticle Research.pdf">2012_Li_Journal of Nanoparticle Research</a></li>
+  <li><a href="2013_Liu_Journal of Nano Research.pdf">2013_Liu_Journal of Nano Research</a></li>
 </ul>
 
 </body>
