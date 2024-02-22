@@ -2,79 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>文献库</title>
+    <title>索引页面</title>
     <style>
         body {
-            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
+            font-size: 20px; /* Increase base font size */
             background-color: #f7f8fa;
+            color: #333;
             padding: 20px;
+            margin-left: 50px; /* Add some space on the left */
+        }
+        .folder-row {
+            margin-bottom: 15px;
+        }
+        .folder-name {
+            font-weight: bold;
+            font-size: 22px; /* Increase font size for folder names */
+        }
+        .subfolder-link {
+            margin-left: 20px;
             font-size: 18px;
+            text-decoration: none;
+            color: #333;
         }
-        .category-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .category-item {
-            display: inline;
-            margin-right: 10px;
-            position: relative;
-        }
-        .category-item:not(:last-child)::after {
-            content: '-';
-            color: #ff6b00;
-            margin-left: 10px;
-        }
-        .category-item:hover .file-list {
-            display: block;
-        }
-        .file-list {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            z-index: 100;
-            left: 0;
-            white-space: nowrap;
-        }
-        .file-item {
-            font-size: 16px;
-            color: #666;
-            margin: 5px 0;
+        .subfolder-link:not(:last-child)::after {
+            content: " - ";
+            color: #333;
         }
     </style>
 </head>
 <body>
-
-<ul class="category-list">
-    <li class="category-item">
-        生活
-        <div class="file-list">
-            <div class="file-item">超市 - 购物</div>
-            <div class="file-item">清洁 - 整理</div>
-            <!-- 其他生活相关文件 -->
-        </div>
-    </li>
-    <li class="category-item">
-        娱乐
-        <div class="file-list">
-            <div class="file-item">电影观看 - 电影</div>
-<div class="file-item">游戏时间 - Switch</div>
-<!-- 其他娱乐相关文件 -->
-</div>
-</li>
-<li class="category-item">
-工作
-<div class="file-list">
-<div class="file-item">项目报告 - 会议</div>
-<div class="file-item">市场分析 - 研究</div>
-<!-- 其他工作相关文件 -->
-</div>
-</li>
-<!-- 更多类别... -->
-
-</ul>
+    <h1 style="font-size: 30px;">索引页面</h1>
+  <div class="folder-row"><span class="folder-name">1. ab:</span>
+  <a href="ab\18. Dielectric\index.html" class="subfolder-link">18. Dielectric</a>  <a href="ab\19. Hybrid Structure\index.html" class="subfolder-link">19. Hybrid Structure</a>  <a href="ab\20. DSSC\index.html" class="subfolder-link">20. DSSC</a>  <a href="ab\22. Magnetic Dipole Dielectric\index.html" class="subfolder-link">22. Magnetic Dipole Dielectric</a>  </div>
+  <div class="folder-row"><span class="folder-name">2. cd:</span>
+  <a href="cd\23. Toroidal\index.html" class="subfolder-link">23. Toroidal</a>  <a href="cd\24. PM 2.5\index.html" class="subfolder-link">24. PM 2.5</a>  <a href="cd\25. optical force\index.html" class="subfolder-link">25. optical force</a>  </div>
+  <div class="folder-row"><span class="folder-name">3. ef:</span>
+  <a href="ef\23. Toroidal\index.html" class="subfolder-link">23. Toroidal</a>  <a href="ef\24. PM 2.5\index.html" class="subfolder-link">24. PM 2.5</a>  <a href="ef\25. optical force\index.html" class="subfolder-link">25. optical force</a>  </div>
+  <div class="folder-row"><span class="folder-name">4. gg:</span>
+  <a href="gg\23. Toroidal\index.html" class="subfolder-link">23. Toroidal</a>  <a href="gg\24. PM 2.5\index.html" class="subfolder-link">24. PM 2.5</a>  <a href="gg\25. optical force\index.html" class="subfolder-link">25. optical force</a>  </div>
 </body>
 </html>
