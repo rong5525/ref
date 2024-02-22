@@ -31,8 +31,10 @@ def generate_subfolder_index_html(subfolder_path, root_folder):
 </head>
 <body>
     <div class="absoluteCenter">
-        <h2>{folder_name}</h2>
-        {pdf_list_html}
+    
+        <h2><a href="../../index.html" style="text-decoration: none; color: black;">Ref</a> - {folder_name}</h2>
+        {pdf_list_html}    
+
     </div>
 </body>
 </html>"""
@@ -58,7 +60,7 @@ def generate_root_index_html(root_folder):
 <body>
     <div class="absoluteCenter">
         
-        <h2>Ref Directory</h2>
+        <h2>Ref</h2>
         """
 
     for first_level_folder in sorted(os.listdir(root_folder)):
