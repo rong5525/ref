@@ -2,44 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>索引页面</title>
+    <title>Ref</title>
     <style>
-        body {
+        body {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 20px; /* Increase base font size */
+            font-size: 22px;
             background-color: #f7f8fa;
             color: #333;
             padding: 20px;
-            margin-left: 50px; /* Add some space on the left */
-        }
-        .folder-row {
+            margin-left: 50px;
+        }}
+        .folder-row {{
             margin-bottom: 15px;
-        }
-        .folder-name {
+        }}
+        .folder-name {{
             font-weight: bold;
-            font-size: 22px; /* Increase font size for folder names */
-        }
-        .subfolder-link {
-            margin-left: 20px;
-            font-size: 18px;
+        }}
+        .subfolder-link {{
             text-decoration: none;
             color: #333;
-        }
-        .subfolder-link:not(:last-child)::after {
+        }}
+        .subfolder-link:not(:last-child)::after {{
             content: " - ";
-            color: #333;
-        }
+            white-space: nowrap; /* Prevent wrapping */
+        }}
     </style>
 </head>
 <body>
-    <h1 style="font-size: 30px;">索引页面</h1>
-  <div class="folder-row"><span class="folder-name">1. .git:</span>
-  <a href=".git\hooks\index.html" class="subfolder-link">hooks</a>  <a href=".git\info\index.html" class="subfolder-link">info</a>  <a href=".git\logs\index.html" class="subfolder-link">logs</a>  <a href=".git\objects\index.html" class="subfolder-link">objects</a>  <a href=".git\refs\index.html" class="subfolder-link">refs</a>  </div>
-  <div class="folder-row"><span class="folder-name">2. 1. Papers:</span>
-  <a href="1. Papers\Ben\index.html" class="subfolder-link">Ben</a>  <a href="1. Papers\Roy\index.html" class="subfolder-link">Roy</a>  </div>
-  <div class="folder-row"><span class="folder-name">3. 2. Mie:</span>
-  <a href="2. Mie\Transverse Scattering\index.html" class="subfolder-link">Transverse Scattering</a>  </div>
-  <div class="folder-row"><span class="folder-name">4. 3. Fuel Cell:</span>
-  <a href="3. Fuel Cell\System Modeling\index.html" class="subfolder-link">System Modeling</a>  </div>
+    <h1>Ref</h1>
+  <div class="folder-row"><span class="folder-name">1. Papers</span>
+<a href="1. Papers\Ben\index.html" class="subfolder-link">Ben</a> <a href="1. Papers\Roy\index.html" class="subfolder-link">Roy</a></div>
+  <div class="folder-row"><span class="folder-name">2. Mie</span>
+<a href="2. Mie\Transverse Scattering\index.html" class="subfolder-link">Transverse Scattering</a></div>
+  <div class="folder-row"><span class="folder-name">3. Fuel Cell</span>
+<a href="3. Fuel Cell\Degradation\index.html" class="subfolder-link">Degradation</a> <a href="3. Fuel Cell\System Modeling\index.html" class="subfolder-link">System Modeling</a></div>
 </body>
 </html>
