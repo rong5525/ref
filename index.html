@@ -1,43 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Ref Directory</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Ref</title>
     <style>
-        body {{
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            font-size: 20px; /* Desktop */
-            color: #333;
-            background-color: #fff;
-            margin: 0;
-            padding: 20px;
-        }}
-        .folder-row {{
-            margin-bottom: 15px;
-        }}
-        .folder-name {{
-            font-weight: bold;
-            font-size: 22px;
-        }}
-        a {{
-            color: #333;
-            text-decoration: none;
-        }}
-        a:hover {{
-            text-decoration: underline;
-        }}
-        @media (max-width: 600px) {{
-            body {{
-                font-size: 18px; /* Mobile */
-            }}
-        }}
+        * { margin: 10; padding: 10; }
+        body { font-family: Arial, sans-serif; font-size: 20px; }
+        .absoluteCenter { width: 900px; height: 600px; position: absolute; left: 50%; top: 10%; margin-left: -450px; }
+        a { text-decoration: none; color: black; }
+        a:hover { text-decoration: underline; }
+        h3 { font-size: 20px; } /* 确保 h3 标签的字体大小适用 */
     </style>
 </head>
 <body>
-    <h1>Ref Directory</h1>
-<div class="folder-row"><span class="folder-name">1. Papers: </span><a href="1. Papers\Ben\index.html">Ben</a> - <a href="1. Papers\Roy\index.html">Roy</a></div>
-<div class="folder-row"><span class="folder-name">2. Mie: </span><a href="2. Mie\Transverse Scattering\index.html">Transverse Scattering</a></div>
-<div class="folder-row"><span class="folder-name">3. Fuel Cell: </span><a href="3. Fuel Cell\Degradation\index.html">Degradation</a> - <a href="3. Fuel Cell\System Modeling\index.html">System Modeling</a></div>
+    <div class="absoluteCenter">
+        
+        <h2>Ref Directory</h2>
+        <h3>1. Papers: <a href="1. Papers\Ben\index.html">Ben</a> - <a href="1. Papers\Roy\index.html">Roy</a></h3>
+<h3>2. Mie: <a href="2. Mie\Transverse Scattering\index.html">Transverse Scattering</a></h3>
+<h3>3. Fuel Cell: <a href="3. Fuel Cell\Degradation\index.html">Degradation</a> - <a href="3. Fuel Cell\System Modeling\index.html">System Modeling</a></h3>
+</div>
 </body>
 </html>

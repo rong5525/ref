@@ -105,6 +105,7 @@ def generate_root_index_html(root_folder):
             subfolder_str = " - ".join(subfolder_links)
             html_str += f'<div class="folder-row"><span class="folder-name">{first_level_folder}: </span>{subfolder_str}</div>\n'
     
+    
     html_str += "</body>\n</html>"
 
     index_html_path = os.path.join(root_folder, 'index.html')
