@@ -1,12 +1,11 @@
 import os
 
 def generate_pdf_list_html(subfolder_path):
-    # 修改为使用 h2 标签
     html_content = '<ul style="list-style-type: none; margin: 0; padding: 0;">\n'
     for item in sorted(os.listdir(subfolder_path)):
         if item.lower().endswith('.pdf'):
             file_name_without_extension = item.rsplit('.', 1)[0]
-            html_content += f'<li style="line-height: 1;"><h2><a href="{item}">{file_name_without_extension}</a></h2></li>\n'
+            html_content += f'<li style="line-height: 1;"><h3><a href="{item}">{file_name_without_extension}</a></h3></li>\n'
     html_content += '</ul>\n'
     return html_content
 
@@ -23,7 +22,7 @@ def generate_subfolder_index_html(subfolder_path, root_folder):
     <style>
         * {{ margin: 10; padding: 10; }}
         body {{ font-family: Arial, sans-serif; font-size: 20px; }}
-        .absoluteCenter {{ width: 900px; height: 600px; position: absolute; left: 50%; top: 10%; margin-left: -450px; }}
+        .absoluteCenter {{ width: 1600px; height: 600px; position: absolute; left: 20%; top: 10%; margin-left: -200px; }}
         a {{ text-decoration: none; color: black; }}
         a:hover {{ text-decoration: underline; }}
         
@@ -51,7 +50,7 @@ def generate_root_index_html(root_folder):
     <style>
         * {{ margin: 10; padding: 10; }}
         body {{ font-family: Arial, sans-serif; font-size: 20px; }}
-        .absoluteCenter {{ width: 900px; height: 600px; position: absolute; left: 50%; top: 10%; margin-left: -450px; }}
+        .absoluteCenter {{ width: 1600px; height: 600px; position: absolute; left: 20%; top: 10%; margin-left: -200px; }}
         a {{ text-decoration: none; color: black; }}
         a:hover {{ text-decoration: underline; }}
        
@@ -72,7 +71,7 @@ def generate_root_index_html(root_folder):
                 
             subfolder_links = [f'<a href="{os.path.join(first_level_folder, f, "index.html")}">{f}</a>' for f in subfolders]
             subfolder_str = " - ".join(subfolder_links)
-            html_str += f'<h2>{first_level_folder}: {subfolder_str}</h2>\n'
+            html_str += f'<h3>{first_level_folder}: {subfolder_str}</h3>\n'
     
     html_str += "</div>\n</body>\n</html>"
 
