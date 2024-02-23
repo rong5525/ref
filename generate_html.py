@@ -71,7 +71,7 @@ def generate_root_index_html(root_folder):
                 
             subfolder_links = [f'<a href="{os.path.join(first_level_folder, f, "index.html")}">{f}</a>' for f in subfolders]
             subfolder_str = " - ".join(subfolder_links)
-            html_str += f'<h3>{first_level_folder}: {subfolder_str}</h3>\n'
+            html_str += f'<h2>{first_level_folder}: </h2><h3>{subfolder_str}</h3>\n'
     
     html_str += "</div>\n</body>\n</html>"
 
