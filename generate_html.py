@@ -20,9 +20,9 @@ def generate_subfolder_index_html(subfolder_path, root_folder):
     <meta charset="utf-8">
     <title>{folder_name}</title>
     <style>
-        * {{ margin: 10; padding: 10; }}
+        * {{ margin: 10; padding: 10; }}                
         body {{ font-family: Arial, sans-serif; font-size: 20px; }}
-        .absoluteCenter {{ width: 1600px; height: 600px; position: absolute; left: 20%; top: 10%; margin-left: -200px; }}
+        .absoluteCenter{{ width:900px; height:600px;position:absolute;  left:50%; top:10%; margin-left: -300px; margin-top: 0px;  }}
         a {{ text-decoration: none; color: black; }}
         a:hover {{ text-decoration: underline; }}
         
@@ -31,7 +31,7 @@ def generate_subfolder_index_html(subfolder_path, root_folder):
 <body>
     <div class="absoluteCenter">
     
-        <h1><a href="../../index.html" style="text-decoration: none; color: black;">Ref</a> - {folder_name}</h1>
+        <h2><a href="../../index.html" style="text-decoration: none; color: black;">Ref</a> - {folder_name}</h2>
         {pdf_list_html}    
 
     </div>
@@ -50,16 +50,16 @@ def generate_root_index_html(root_folder):
     <style>
         * {{ margin: 10; padding: 10; }}
         body {{ font-family: Arial, sans-serif; font-size: 20px; }}
-        .absoluteCenter {{ width: 1600px; height: 600px; position: absolute; left: 20%; top: 10%; margin-left: -200px; }}
+        .absoluteCenter{{ width:900px; height:600px;position:absolute;  left:50%; top:10%; margin-left: -300px; margin-top: 0px;  }}
         a {{ text-decoration: none; color: black; }}
         a:hover {{ text-decoration: underline; }}
-       
+       .indented-h3 {{padding-left: 2em; /* 设置左侧缩进 */}}
     </style>
 </head>
 <body>
     <div class="absoluteCenter">
         
-        <h1>Ref</h1>
+        <h2>Ref</h2>
         """
 
     for first_level_folder in sorted(os.listdir(root_folder)):
@@ -71,7 +71,10 @@ def generate_root_index_html(root_folder):
                 
             subfolder_links = [f'<a href="{os.path.join(first_level_folder, f, "index.html")}">{f}</a>' for f in subfolders]
             subfolder_str = " - ".join(subfolder_links)
-            html_str += f'<h2>{first_level_folder}: </h2><h3>{subfolder_str}</h3>\n'
+            html_str += f'<h2>{first_level_folder}: </h2><div class="indented-h3"><h3>{subfolder_str}</h3></div>\n'
+            
+
+
     
     html_str += "</div>\n</body>\n</html>"
 
