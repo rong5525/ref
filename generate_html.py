@@ -1,7 +1,7 @@
 import os
 
 def generate_pdf_list_html(subfolder_path):
-    html_content = '<ul style="list-style-type: none; margin: 0; padding: 0;">\n'
+    html_content = '<ul>\n'
     for item in sorted(os.listdir(subfolder_path)):
         if item.lower().endswith('.pdf'):
             file_name_without_extension = item.rsplit('.', 1)[0]
