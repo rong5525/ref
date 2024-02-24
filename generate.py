@@ -1,7 +1,7 @@
 import os
 
 def generate_pdf_list_html(subfolder_path):
-    html_content = '<ul style="list-style-type: none; margin: 0; padding: 0;">\n'
+    html_content = '<ul>\n'
     for item in sorted(os.listdir(subfolder_path)):
         if item.lower().endswith('.pdf'):
             file_name_without_extension = item.rsplit('.', 1)[0]
@@ -53,7 +53,7 @@ def generate_root_index_html(root_folder):
         .absoluteCenter{{ width:900px; height:600px;position:absolute;  left:50%; top:10%; margin-left: -300px; margin-top: 0px;  }}
         a {{ text-decoration: none; color: black; }}
         a:hover {{ text-decoration: underline; }}
-       .indented-h3 {{padding-left: 2em; /* 设置左侧缩进 */}}
+       .indented-h3 {{padding-left: 1.5em; /* 设置左侧缩进 */}}
     </style>
 </head>
 <body>
